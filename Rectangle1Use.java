@@ -12,7 +12,7 @@ class Rectangle1
 		breadth = b;
 
 	}
-	public void areaRectangle(){
+	public  void areaRectangle(){
 		System.out.println("Perimeter of a rectangle with length "+length+" breadth "+breadth +" is "+(2*(length+breadth))+" sq units ");
 	}
 }
