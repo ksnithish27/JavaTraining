@@ -24,6 +24,28 @@ public class TriangleDemo {
 	}//TriangleDemo Constructor
 	public double Perimeter(){
 		double perimeter;
-		perimeter = this.P;
+		perimeter = this.P.distanceFromPoint(this.R);
+		perimeter = perimeter + this.P.distanceFromPoint(this.R);
+		perimeter = perimeter+this.Q.distanceFromPoint(this.R);
+		return perimeter;
+	}//perimeter()
+	void Translate(double xTrans,double yTrans){
+		this.P.translate(xTrans,yTrans);
+		this.Q.translate(xTrans,yTrans);
+		this.R.translate(xTrans,yTrans);
+
+	}//Translate()
+
+	public double area(){
+		double peri,area,s,a,b,c;
+		perimeter = this.Perimeter();
+		s = perimeter/2;
+		a = this.P.distanceFromPoint(this.Q);
+		b = this.P.distanceFromPoint(this.R);
+		c = this.Q.distanceFromPoint(this.R);
+		area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+		return area;
+
+	}//area()
 }//TriangleDemo
 }
